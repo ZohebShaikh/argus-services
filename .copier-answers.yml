@@ -1,0 +1,18 @@
+# Changes here will be overwritten by Copier; NEVER EDIT MANUALLY
+_commit: 4.3.3
+_src_path: https://github.com/epics-containers/services-template-helm
+athena_services:
+- rabbitmq
+- blueapi
+- nexus
+cluster_name: argus
+cluster_namespace: argus
+cluster_type: dls_cluster
+description: ckk43848 IOC Instances and Services
+git_platform: github.com
+github_org: ZohebShaikh
+instrument: ckk43848
+ioc_group: ckk43848
+location: argus
+logging_url: https://graylog2.diamond.ac.uk/search?rangetype=relative&fields=message%2Csource&width=1489&highlightMessage=&relative=172800&q=pod_name%3A{service_name}*
+repo_uri: https://github.com/ZohebShaikh/argus-services
