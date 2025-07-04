@@ -15,7 +15,7 @@ blueapi:
     env:
       metadata:
          instrument: ckk43848
-         # instrument_session: 
+         instrument_session: cm1233 
       sources:
       - kind: planFunctions
         module: dodal.plans
@@ -25,7 +25,7 @@ blueapi:
       auth:
         username: guest
         password: guest
-      host: ckk43848-rabbitmq-daq.diamond.ac.uk
+      url: http://ckk43848-rabbitmq-daq.diamond.ac.uk
       enabled: false
     logging:
       level: "INFO"
