@@ -8,7 +8,7 @@ blueapi:
       cpu: 500m
       memory: 100Mi
   ingress:
-    create: true
+    enabled: true
     hosts:
       - host: ckk43848.diamond.ac.uk
         paths:
