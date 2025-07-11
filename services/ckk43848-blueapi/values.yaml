@@ -8,10 +8,12 @@ blueapi:
       cpu: 500m
       memory: 100Mi
   ingress:
-    create: false
+    create: true
     host: ckk43848.diamond.ac.uk
   
   worker:
+    api:
+      url: http://0.0.0.0:8323
     env:
       metadata:
          instrument: ckk43848
@@ -25,13 +27,13 @@ blueapi:
       auth:
         username: guest
         password: guest
-      url: http://ckk43848-rabbitmq-daq.diamond.ac.uk
+      url: tcp://ckk43848-rabbitmq-daq.diamond.ac.uk
       enabled: false
     logging:
       level: "INFO"
       graylog:
         enabled: false
-        url: http://graylog-log-target.diamond.ac.uk:12231/
+        url: tcp://graylog-log-target.diamond.ac.uk:12231/
     oidc:
      well_known_url: "https://authn.diamond.ac.uk/realms/master/.well-known/openid-configuration"
      client_id: "blueapi-cli"
@@ -44,6 +46,7 @@ blueapi:
     enabled: false
 
 oauth2:
+  enabled: false
   proxyVarsAsSecrets: false
   extraEnv:
     - name: OAUTH2_PROXY_CLIENT_SECRET
