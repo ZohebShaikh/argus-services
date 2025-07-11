@@ -17,7 +17,6 @@ blueapi:
     env:
       metadata:
          instrument: ckk43848
-         instrument_session: cm1233 
       sources:
       - kind: planFunctions
         module: dodal.plans
