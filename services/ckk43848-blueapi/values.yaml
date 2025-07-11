@@ -9,8 +9,11 @@ blueapi:
       memory: 100Mi
   ingress:
     create: true
-    host: ckk43848.diamond.ac.uk
-  
+    hosts:
+      - host: ckk43848.diamond.ac.uk
+        paths:
+          - path: /
+            pathType: Prefix
   worker:
     # api:
     #   url: http://0.0.0.0:8000
