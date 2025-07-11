@@ -1,5 +1,5 @@
 blueapi:
-  hostNetwork: false
+  hostNetwork: true
   resources:
     limits:
       cpu: 1000m
@@ -48,7 +48,7 @@ blueapi:
     enabled: false
 
 oauth2:
-  enabled: true
+  enabled: false
   proxyVarsAsSecrets: false
   extraEnv:
     - name: OAUTH2_PROXY_CLIENT_SECRET
