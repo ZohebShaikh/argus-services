@@ -22,12 +22,12 @@ tiled:
           device_flow_client_id: blueapi-cli
           well_known_uri: "https://authn.diamond.ac.uk/realms/master/.well-known/openid-configuration"
           confirmation_message: "You have logged in with authn.diamond.ac.uk as {id}."
-    access_control:
-      access_policy: "config.dls:DiamondOpenPolicyAgentAuthorizationPolicy"
-      args:
-        authorization_provider: http://p46-opa:8181/v1/data/diamond/policy/
-        token_audience: account
-        empty_access_blob_public: true
+    # access_control:
+    #   access_policy: "config.dls:DiamondOpenPolicyAgentAuthorizationPolicy"
+    #   args:
+    #     authorization_provider: http://p46-opa:8181/v1/data/diamond/policy/
+    #     token_audience: account
+    #     empty_access_blob_public: true
     trees:
       - path: /
         tree: catalog
@@ -82,6 +82,13 @@ tiled:
   - name: storage
     mountPath: "/storage"
     readOnly: false
+  - mountPath: /deploy/config
+    name: dls.py
+    readOnly: true
+  - mountPath: /deploy/config
+    name: __init__.py
+    readOnly: true
+    
   volumes:
   # - hostPath:
   #     path: /exports/mybeamline
