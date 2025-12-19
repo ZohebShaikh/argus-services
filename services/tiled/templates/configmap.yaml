@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: tiled-configmap
+  name: tiled-access-policy
 data:
-  dls: |-
+  dls.py: |-
     import json
 
     from pydantic import BaseModel, HttpUrl, TypeAdapter
@@ -68,5 +68,5 @@ data:
 
             return json.dumps({"input": _input})
 
-  init: |-
+  __init__.py: |-
 
