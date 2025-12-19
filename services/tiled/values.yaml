@@ -23,7 +23,7 @@ tiled:
           well_known_uri: "https://authn.diamond.ac.uk/realms/master/.well-known/openid-configuration"
           confirmation_message: "You have logged in with authn.diamond.ac.uk as {id}."
     access_control:
-      access_policy: "config.dls:DiamondOpenPolicyAgentAuthorizationPolicy"
+      access_policy: "access_policy.dls:DiamondOpenPolicyAgentAuthorizationPolicy"
       args:
         authorization_provider: http://p46-opa:8181/v1/data/diamond/policy/
         token_audience: account
