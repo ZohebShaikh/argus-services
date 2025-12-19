@@ -3,7 +3,7 @@ kind: ConfigMap
 metadata:
   name: tiled-configmap
 data:
-  dls.py: |-
+  dls: |-
     import json
 
     from pydantic import BaseModel, HttpUrl, TypeAdapter
@@ -68,6 +68,5 @@ data:
 
             return json.dumps({"input": _input})
 
-  __init__.py: |-
+  init: |-
 
-    

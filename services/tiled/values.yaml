@@ -83,10 +83,10 @@ tiled:
     mountPath: "/storage"
     readOnly: false
   - mountPath: /deploy/config
-    name: dls.py
+    name: dls
     readOnly: true
   - mountPath: /deploy/config
-    name: __init__.py
+    name: init
     readOnly: true
     
   volumes:
