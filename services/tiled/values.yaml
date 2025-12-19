@@ -90,7 +90,11 @@ tiled:
   - name: storage
     persistentVolumeClaim:
       claimName: tiled-storage-pvc
-
+  securityContext:
+    runAsUser: 0
+    runAsGroup: 0
+    readOnlyRootFilesystem: false
+    runAsNonRoot: false
 # glazed:
 #   image:
 #     repository: ghcr.io/diamondjoseph/glazed
