@@ -82,14 +82,14 @@ tiled:
   - name: storage
     mountPath: "/storage"
     readOnly: false
-  # volumes:
-  # - hostPath:
-  #     path: /exports/mybeamline
-  #     type: DirectoryOrCreate
-  #   name: data
-  # - name: storage
-  #   persistentVolumeClaim:
-  #     claimName: tiled-storage-pvc
+  volumes:
+  - hostPath:
+      path: /exports/mybeamline
+      type: DirectoryOrCreate
+    name: data
+  - name: storage
+    persistentVolumeClaim:
+      claimName: tiled-storage-pvc
 
 # glazed:
 #   image:
