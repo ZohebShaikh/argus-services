@@ -83,7 +83,7 @@ tiled:
     mountPath: "/storage"
     readOnly: false
   - name: access-policy
-    mountPath: /deploy/config
+    mountPath: /deploy/test
     readOnly: true
     
   volumes:
