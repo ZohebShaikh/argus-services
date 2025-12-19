@@ -83,10 +83,7 @@ tiled:
     mountPath: "/storage"
     readOnly: false
   - mountPath: /deploy/config
-    name: dls
-    readOnly: true
-  - mountPath: /deploy/config
-    name: init
+    name: tiled-configmap
     readOnly: true
     
   volumes:
@@ -97,6 +94,9 @@ tiled:
   - name: storage
     persistentVolumeClaim:
       claimName: tiled-storage-pvc
+  - name: tiled-configmap
+    configMap:
+      name: tiled-configmap
   securityContext:
     runAsUser: 0
     runAsGroup: 0
